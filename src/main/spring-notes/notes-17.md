@@ -95,3 +95,32 @@ you take the ``/conf`` directory located in the `/etc/` folder so the IDE doesn'
 3) After doing it, set up the Smart Tomcat plugin via Plugins and go to the ``lib`` folder where the catalina.jar files are.
 
 Make sure all package names are valid in ``web.xml``. Make sure all ``jsp`` files are properly populated.
+
+Also make sure pom.xml is edited as the following:
+```xml
+<build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat6-maven-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.tomcat.maven</groupId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
+                    <version>2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+    </build>
+```
+
+Remember, you're going to need to move the folder where the Tomcat installation is downloaded
+so that you can move it to a place that will be clearly visible for IntelliJ to use
+the Smart Tomcat plugin in order to deploy the files we create. This is important. 
+
+Controller will map the URL to the code within your class. Components will be scanned
+recursively beginning at the highest-most defined directory going downward.
+
