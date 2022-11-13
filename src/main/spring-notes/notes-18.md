@@ -1,3 +1,4 @@
+
 # Reading Form Data with Spring MVC (Notes #18)
 
 At a high level, we are gonna have a form asking the user for its name, they'll hit 
@@ -46,4 +47,4 @@ Step by step breakdown of the development process!
 1) Create controller class
 2) Show the html form: create controller method to show HTML form, create view page for HTML form.
 3) Process HTML Form: create controller method to process HTML form, develop view page for confirmation
-4) 
+
